@@ -1,0 +1,53 @@
+\NeedsTeXFormat{LaTeX2e}
+%\ProvidesClass{csse1001}[CSSE1001 Practical Slides]
+ 
+\LoadClass[12]{beamer}
+
+% Programming language formatting
+\input{languages}
+
+% Slide formatting
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\setbeamertemplate{frame numbering}[fraction]
+\usefonttheme{metropolis}
+\usecolortheme{spruce}
+\setbeamercolor{background canvas}{bg=white}
+
+\definecolor{mygreen}{rgb}{125, 5, 25}
+\usecolortheme[named=mygreen]{structure}
+\setbeamercovered{transparent=5}
+
+\setlist[itemize]{label=\bullet}
+\setlist[enumerate]{label=\arabic*.}
+
+\newenvironment{topic}[1]
+    {\begin{frame}[t,fragile,environment=topic]{#1}}
+    {\end{frame}}
+
+\newenvironment{subtopic}[1]
+    {\begin{onlyenv}<#1>}
+    {\end{onlyenv}}
+
+% Title page information
+\title{CSSE1001 Practicals \MakeUppercase{\jobname}}
+\author{CSSE1001 Course Staff}
+\institute {Semester 1, 2018}
+
+
+% Magic: https://tex.stackexchange.com/questions/154237/how-to-access-ith-argument-of-a-macro
+% (Include from command line)
+\usepackage{stringstrings}
+\newcounter{index}
+\newcommand{\importfile}[2]{\input{#2}}
+\newcommand{\importfiles}[1]{
+  \getargs{#1}
+  \setcounter{index}{0}
+  \whiledo{\theindex < \narg}{
+    \stepcounter{index}
+    \importfile{\theindex}{\csname arg\romannumeral\theindex\endcsname}
+  }
+}
+
