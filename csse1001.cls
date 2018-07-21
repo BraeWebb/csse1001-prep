@@ -36,18 +36,3 @@
 \author{CSSE1001 Course Staff}
 \institute {Semester 1, 2018}
 
-
-% Magic: https://tex.stackexchange.com/questions/154237/how-to-access-ith-argument-of-a-macro
-% (Include from command line)
-\usepackage{stringstrings}
-\newcounter{index}
-\newcommand{\importfile}[2]{\input{#2}}
-\newcommand{\importfiles}[1]{
-  \getargs{#1}
-  \setcounter{index}{0}
-  \whiledo{\theindex < \narg}{
-    \stepcounter{index}
-    \importfile{\theindex}{\csname arg\romannumeral\theindex\endcsname}
-  }
-}
-
