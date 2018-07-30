@@ -1,5 +1,4 @@
 OUTPUT := out/
-TMP := tmp/
 WEEKS := $(wildcard ./week*.tex)
 
 TEX=pdflatex
@@ -13,8 +12,5 @@ all: $(WEEKS)
 
 build: csse1001.cls $(find_files)
 	mkdir -p $(OUTPUT)
-	mkdir -p $(TMP)
-	$(TEX) $(FLAGS) -output-directory=$(TMP) $(WEEK)
-	mv $(TMP)*.pdf $(OUTPUT)
-	rm -r $(TMP)
+	$(TEX) $(FLAGS) -output-directory=$(OUTPUT) $(WEEK) || true
 
