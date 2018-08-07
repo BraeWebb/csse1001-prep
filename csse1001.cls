@@ -30,6 +30,8 @@
 \newenvironment{subtopic}[1]
     {\begin{onlyenv}<#1>}
     {\end{onlyenv}}
+    
+\newcommand{\code}[1]{\texttt{#1}}
 
 % Title page information
 \title{CSSE1001 Practicals \MakeUppercase{\jobname}}
