@@ -36,5 +36,5 @@
 % Title page information
 \title{CSSE1001 Practicals \MakeUppercase{\jobname}}
 \author{CSSE1001 Course Staff}
-\institute {Semester 1, 2018}
+\institute {Semester 2, 2018}
 
