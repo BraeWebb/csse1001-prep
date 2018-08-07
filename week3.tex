@@ -56,7 +56,7 @@ There are two more challenging extension tasks for this assignment (worth 1 mark
 \end{topic}
 
 \begin{topic}{Documentation}
-All the functions you write for the assignment (except for \code{main}) must have a \textbf{docstring} outlining what the function does, what inputs it takes, and what it outputs
+All the functions you write for the assignment (except for \code{main}) must have a \textbf{docstring} outlining what the function does, what parameters it takes, and what it returns
 
 \begin{subtopic}{2-}
 See the \href{http://csse1001.uqcloud.net/notes/commenting}{course notes on commenting} for information on how your docstrings should be written
@@ -68,7 +68,7 @@ It is also expected that any complicated parts of code are explained using \text
 
 \begin{subtopic}{4-}
 Make sure you do not overuse comments - for example the following comment is considered extraneous and will lose marks:\\
-\code{x = 1   # x is assigned 1}
+\code{x = 1   \# x is assigned 1}
 \end{subtopic}
 
 \end{topic}
@@ -88,11 +88,26 @@ This assignment is worth 5\% of your final grade - there are 10 marks in total
 \textbf{3 of the 10} marks are allocated to \textbf{coding style} (i.e. good variable naming, readability, and appropriate logic)
 \end{subtopic}
 
-\begin{subtopic}{5-}
-The functionality component of your assignment will be automatically marked, so make sure all functions that we ask for are present, take the right input (\textit{do not} add or remove parameters to these functions), give the right output, and work independently of the \code{main} function.
+\end{topic}
+
+\begin{topic}{Marking}
+The functionality component of this assignment will me \textit{automatically marked}
+
+\begin{subtopic}{2-}
+Each of the major functions (\code{encrypt}, \code{decrypt}, \code{find_encryption_offsets} and \code{main}) will be tested individually
 \end{subtopic}
 
-\end{topic}
+\begin{subtopic}{3-}
+Because of this, ensure the function definitions (i.e. function names and parameters) are the same as the examples on the assignment spec
+\end{subtopic}
+
+\begin{subtopic}{4-}
+Also ensure the output of your code is \textit{identical} to the examples on the assignment spec
+\end{subtopic}
+
+\begin{subtopic}{5-}
+It is likely that you will be given a sample test suite before your assignment is due which will be similar but \textit{not as comprehensive} as the tests we will use to mark your assignment
+\end{subtopic}
 
 \begin{topic}{How to start?}
 Re-read the assignment sheet so you fully-understand what we are expecting
