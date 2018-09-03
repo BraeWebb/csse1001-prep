@@ -1,0 +1,91 @@
+\documentclass[week2]{csse1001}
+
+\title{CSSE1001 Week 7 Practicals}
+ 
+\begin{document}
+
+\begin{frame} 
+\maketitle
+\end{frame}
+
+\section{Assignment 1 Common Pitfalls}
+
+\begin{topic}{Pitfalls}
+Duplicated encrypt/decrypt code (decrypt could have been as simple as\\ \code{return encrypt(text, -offset)}
+
+\begin{subtopic}{2-}
+Printing/prompting input outside of main
+\end{subtopic}
+
+\begin{subtopic}{3-}
+Using a while loop where a for loop was more appropriate
+\end{subtopic}
+
+\begin{subtopic}{4-}
+Magic numbers
+\end{subtopic}
+
+\begin{subtopic}{5-}
+Defining the alphabet in each function (as opposed to a global constant)
+\end{subtopic}
+
+\begin{subtopic}{6-}
+Checking for each individual punctuation character (better to use\\ \code{if not char.isalpha():}
+\end{subtopic}
+
+\begin{subtopic}{7-}
+Incorrectly defining functions
+\end{subtopic}
+
+\end{topic}
+
+\begin{topic}{Pitfalls}
+Handling 0 offset checks in encrypt/decrypt
+
+\begin{subtopic}{2-}
+Duplicated code in main (could've split into other functions)
+\end{subtopic}
+
+\begin{subtopic}{3-}
+Unneccessary casting (eg. \code{text = str(input("enter text"))})
+\end{subtopic}
+
+\begin{subtopic}{4-}
+Regex (re)
+\end{subtopic}
+
+\begin{subtopic}{5-}
+Bad variable naming
+\end{subtopic}
+
+\begin{subtopic}{6-}
+Not using the sample tests (or not asking tutors for help with them)
+\end{subtopic}
+
+\begin{subtopic}{7-}
+Missing out on easy marks by forgetting to write inline comments or not following the docstring guide in the course notes
+\end{subtopic}
+
+\end{topic}
+
+\section{Assignment 2 Overview}
+
+\section{Assignment 2 Demo}
+
+\begin{topic}{Assignment 2 Tips}
+Review the lecture/tutorial/myPy material on classes/OOP
+
+\begin{subtopic}{2-}
+More work than A1, but a lot of trivial methods to write
+\end{subtopic}
+
+\begin{subtopic}{3-}
+Work on the `easy' marks first - constructors, getters, setters, docstrings
+\end{subtopic}
+
+\begin{subtopic}{4-}
+Of course... start early ;)
+\end{subtopic}
+\end{topic}
+
+\end{document} 
